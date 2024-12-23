@@ -1,0 +1,204 @@
+/* Container chính của trang */
+.profile-container {
+  width: 80%;
+  max-width: 1000px;
+  margin:  auto;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+.profile-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Thông tin người dùng */
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Avatar */
+.avatar {
+  text-align: center;
+  margin-right: 30px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.avatar input {
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+/* Chi tiết người dùng */
+.user-details {
+  flex: 1;
+}
+
+.user-details div {
+  margin-bottom: 30px;
+}
+
+.user-details strong {
+  font-weight: bold;
+  color: #4c6a92;
+}
+
+.user-details input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Các thao tác và chỉnh sửa */
+.profile-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile-actions button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #4c6a92;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-actions button:hover {
+  background-color: #3b5680;
+}
+
+.profile-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Phần thay đổi mật khẩu */
+.password-fields {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.password-fields div {
+  margin-bottom: 15px;
+}
+
+.password-fields label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.password-fields input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-fields button {
+  padding: 8px 15px;
+  background-color: #4c6a92;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.password-fields button:hover {
+  background-color: #3b5680;
+}
+
+.password-fields button:focus {
+  outline: none;
+}
+
+.password-fields button + button {
+  margin-top: 10px;
+}
+
+/* Phần thay đổi mật khẩu */
+.change-password {
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.change-password h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #4c6a92;
+}
+
+.input-password div {
+  margin-bottom: 5px;
+}
+
+.input-password label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-password input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-actions{
+  display: flex;
+  justify-content: center;
+}
+.password-actions button {
+
+  padding: 8px 15px;
+  background-color: #4c6a92;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.password-actions button:hover {
+  background-color: #3b5680;
+}
+
+.password-actions button:focus {
+  outline: none;
+}
+
+/* Toast notifications */
+.Toastify__toast {
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.Toastify__toast--error {
+  background-color: #f5f5f5;
+}
+
+.Toastify__toast--success {
+  background-color: #eaf0ec;
+}

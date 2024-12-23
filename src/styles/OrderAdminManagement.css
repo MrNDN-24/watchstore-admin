@@ -1,0 +1,164 @@
+.order-management-wrapper {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order-status-filter {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.status-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.date-filter {
+  margin-bottom: 20px;
+}
+
+.status-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: opacity 0.3s ease, background-color 0.3s ease, border-width 0.3s ease;
+}
+
+.status-btn.active {
+  opacity: 0.6;               /* Dimming the button */
+  background-color: #007bff;  /* Active button background */
+  color: white;                /* Active button text color */
+  border-color: #0056b3;       /* Active button border color */
+  border-width: 2px;           /* Thicker border */
+}
+
+.status-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.status-btn:nth-child(1) {
+  background-color: #a922bd;
+  color: white;
+}
+
+.status-btn:nth-child(2) {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-btn:nth-child(3) {
+  background-color: #ffc107;
+  color: white;
+}
+
+.status-btn:nth-child(4) {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.status-btn:nth-child(5) {
+  background-color: #dc3545;
+  color: white;
+}
+
+.status-btn:nth-child(6) {
+  background-color: #110e0e;
+  color: white;
+}
+.order-table {
+  overflow-x: scroll;
+  max-height: 430px;
+  overflow-y: scroll;
+}
+.order-table::-webkit-scrollbar {
+  display: none;
+}
+.order-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #110e0e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.order-table th,
+.order-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.order-table th {
+  background-color: #f4f4f4;
+  border-top: 2px solid #110e0e;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Styles for buttons in the action column */
+/* Button Layout for Actions */
+.order-button-actions {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.order-button-actions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.icon-order {
+  font-size: 18px;
+}
+
+.order-details{
+  background-color: rgb(221, 90, 221) ;
+}
+.order-confirm {
+  background-color: #28a745;
+}
+
+.order-shipping {
+  background-color: #ffc107;
+}
+
+.order-complete {
+  background-color: #17a2b8;
+}
+
+.order-cancel {
+  background-color: #dc3545;
+}
+
+.no-orders-message {
+  color: #dc3545;  /* Red color for alert */
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}

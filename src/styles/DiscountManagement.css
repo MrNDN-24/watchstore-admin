@@ -1,0 +1,252 @@
+/* Overall Layout */
+.discount-admin {
+    padding: 20px;
+  }
+  
+  /* Header */
+  .discount-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .discount-header h1 {
+    font-size: 2rem;
+  }
+  
+  .discount-search input {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .add-discount-btn {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .add-discount-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Table */
+  .discount-table {
+    overflow-x: scroll;
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+  .discount-table::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .discount-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #110e0e;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .discount-table th,
+  .discount-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .discount-table th {
+    background-color: #f4f4f4;
+    border-top: 2px solid #110e0e;
+  }
+
+  /* Button Layout for Actions */
+  .discount-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .discount-actions button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .icon-discount {
+    font-size: 18px;
+  }
+  
+  /* Edit Button (Green) */
+  .edit-btn-discount {
+    background-color: #28a745;
+  }
+  
+  .edit-btn-discount:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+  }
+  
+  /* Delete Button (Red) */
+  .delete-btn-discount {
+    background-color: #dc3545;
+  }
+  
+  .delete-btn-discount:hover {
+    background-color: rgba(36, 221, 119, 0.1);
+    transform: scale(1.1);
+  }
+  
+  /* Active Button (Lock - Black) */
+  .active-btn-discount {
+    background-color: #343a40;
+  }
+  
+  .active-btn-discount:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+  }
+  
+  /* Modal discount */
+  .modal-box-discount {
+    margin-top: 60px;
+    position: fixed;
+    top: 0;
+    left: 100px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content-discount {
+    position: relative;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 80%; 
+    max-width: 600px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    margin: 0 auto; 
+  }
+  
+  /* Inputs, Textarea, Buttons */
+  .modal-content-discount input,
+  .modal-content-discount textarea {
+    width: 100%; 
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+  }
+  
+  .close-btn-discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #5f666d;
+    border: none; 
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .modal-buttons button {
+    padding: 8px 16px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .modal-buttons button:hover {
+    background-color: #218838;
+  }
+  
+  .modal-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:30px;
+  }
+  .modal-dateStart,.modal-dateEnd{
+    margin-top: 10px;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Adjust Header for Small Screens */
+    .discount-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    /* Make Heading Smaller */
+    .discount-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    /* Adjust Table for Mobile */
+    .discount-table table,
+    .discount-table th,
+    .discount-table td {
+      font-size: 0.9rem;
+    }
+  
+    /* Adjust Modal Size */
+    .modal-content-discount {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    /* Button Adjustments */
+    .add-discount-btn {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  
+    /* Input Adjustments */
+    .discount-search input {
+      font-size: 0.9rem;
+      padding: 4px 8px;
+    }
+  
+    /* Center Action Buttons */
+    .discount-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

@@ -1,0 +1,70 @@
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #3c5b7a, #578fb8);
+    padding: 10px 20px;
+    color: white;
+    box-sizing: border-box;
+    z-index: 1000; /* Navbar on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px; /* Điều chỉnh khoảng cách giữa các nút */
+    align-items: center; /* Đảm bảo các nút căn chỉnh ngang */
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center; /* Căn chỉnh icon và text ngang hàng */
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.navbar-link svg {
+    margin-right: 8px; /* Khoảng cách giữa icon và text */
+    font-size: 1.2em; /* Kích thước của icon */
+}
+
+/* Nút logout */
+.logout-btn {
+    background: #578fb8; /* Màu nền giống navbar */
+    border: none;
+    padding: 6px 10px; /* Điều chỉnh padding để nút nhỏ lại vừa với nội dung */
+    border-radius: 6px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    width: auto; /* Đảm bảo nút tự động điều chỉnh chiều rộng theo nội dung */
+    margin-top: 20px;
+}
+
+/* Hover effect cho logout */
+.logout-btn:hover {
+    background: linear-gradient(135deg, #578fb8, #3774b1); /* Đổi màu nền khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+/* Icon của logout */
+.logout-btn svg {
+    margin-right: 8px;
+    font-size: 1.2em; /* Kích thước của icon */
+}

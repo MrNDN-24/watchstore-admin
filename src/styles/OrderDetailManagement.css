@@ -1,0 +1,119 @@
+.order-detail-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .order-detail-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 20px;
+  }
+    
+  .order-detail-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 200px;
+  }
+  
+  .order-detail-container {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .order-products,
+  .order-info {
+    flex: 1; 
+    padding: 20px;
+  }
+  .order-products {
+    border-right: 2px solid #ddd;
+    max-height: 400px; 
+    overflow-y: auto; 
+  }
+  .order-products::-webkit-scrollbar{
+    display: none;
+}
+
+  .order-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 15px;
+  }
+  
+ 
+  .product-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .order-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+
+  }
+  
+  .order-info p strong {
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    
+  }
+  .order-info p span {
+    display: block; /* Đảm bảo giá trị nằm ở dưới tên trường */
+    margin-top: 5px; /* Khoảng cách giữa tên trường và giá trị */
+  }
+  
+  .order-info p strong svg {
+    margin-right: 8px;
+    
+  }
+  
+  .order-back {
+    padding: 10px 20px; /* Điều chỉnh padding theo ý muốn */
+    background-color: #131516;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: auto; /* Đảm bảo nút có kích thước phù hợp với nội dung */
+    display: inline-block; /* Đảm bảo nút có kích thước tự động thay đổi theo nội dung */
+  }
+  
+  .order-back:hover {
+    background-color: #33373b;
+  }
+  
+  .order-back:focus {
+    outline: none;
+  }
+  

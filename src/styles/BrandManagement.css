@@ -1,0 +1,314 @@
+/* Overall Layout */
+.brand-admin {
+    padding: 20px;
+}
+
+/* Header */
+.brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.brand-header h1 {
+    font-size: 2rem;
+}
+
+.brand-search input {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-brand-btn {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.add-brand-btn:hover {
+    background-color: #218838;
+}
+
+/* Table */
+.brand-table {
+    overflow-x: scroll;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.brand-table::-webkit-scrollbar{
+    display: none;
+}
+.brand-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #110e0e;
+    border-radius: 10px;
+    overflow: hidden;
+    table-layout: fixed; 
+}
+
+.brand-table th,
+.brand-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    white-space: normal; /* Cho phép xuống dòng */
+    word-wrap: break-word; /* Ngắt từ nếu quá dài */
+    word-break: break-word; /* Ngắt từ tại vị trí phù hợp */
+    height: auto; /* Để dòng tự điều chỉnh chiều cao */
+    
+}
+
+.brand-table th {
+    background-color: #f4f4f4;
+    border-top: 2px solid #110e0e;
+}
+
+.brand-table th:nth-child(4),
+.brand-table td:nth-child(4) {
+    width: 20%; 
+}
+
+.brand-table th:nth-child(3), 
+.brand-table td:nth-child(3) {
+    width: 30%; 
+}
+.brand-table th:nth-child(5), 
+.brand-table td:nth-child(5) {
+    width: 20%; 
+}
+/* Button Layout for Actions */
+.brand-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-actions button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.icon-brand {
+    font-size: 18px;
+}
+
+/* Edit Button (Green) */
+.edit-btn-brand {
+    background-color: #28a745;
+}
+
+.edit-btn-brand:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+/* Delete Button (Red) */
+.delete-btn-brand {
+    background-color: #dc3545;
+}
+
+.delete-btn-brand:hover {
+    background-color: rgba(36, 221, 119, 0.1);
+    transform: scale(1.1);
+}
+
+
+/* Active Button (Lock - Black) */
+.active-btn-brand {
+    background-color: #343a40;
+}
+
+.active-btn-brand:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+/* .pagination {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .panination-content{
+    margin-top: 10px;
+    margin-left: 12px;
+  }
+  
+.pagination-button
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .pagination-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  .icon-pagination{
+    font-size: 18px;
+  } */
+  
+/* Modal Brands */
+.modal-box-brands {
+    margin-top: 60px;
+    position: fixed;
+    top: 0;
+    left: 100px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-brands {
+    position: relative;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.modal-content-brands input,
+.modal-content-brands textarea {
+    width: 100%; 
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.image-preview {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+  
+.image-preview p {
+    margin-right: 30px;
+}
+  
+.image-preview img {
+    width: 100px;
+}
+
+.modal-actions-brands {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-actions-brands button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.modal-actions-brands button:hover {
+    background-color: #0056b3;
+}
+
+.close-btn-brands {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #5f666d;
+    border: none; 
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .brand-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .add-brand-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .brand-actions button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .modal-content-brands {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand-search input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .brand-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand-table th,
+    .brand-table td {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .modal-content-brands input,
+    .modal-content-brands textarea {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+  

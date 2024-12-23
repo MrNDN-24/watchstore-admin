@@ -1,0 +1,218 @@
+/* customer Management Container */
+.customer-admin {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* customer Header */
+  .customer-header {
+    display: flex;
+    
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .customer-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 200px;
+  }
+  
+  .customer-search {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+ /* Table */
+.customer-table {
+    overflow-x: scroll;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.customer-table::-webkit-scrollbar {
+    display: none;
+}
+.customer-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #110e0e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.customer-table th,
+.customer-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+.customer-table th {
+    background-color: #f4f4f4;
+    border-top: 2px solid #110e0e;
+}
+
+.customer-table th:nth-child(6), /* Hành Động column */
+.customer-table td:nth-child(6) {
+    width: 15%; /* Increase width of Hành Động column */
+}
+.customer-table th:nth-child(1), /* Hành Động column */
+.customer-table td:nth-child(1) {
+    width: 10%; /* Increase width of Hành Động column */
+}
+/* Button Layout for Actions */
+.customer-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.customer-actions button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.icon-customer {
+    font-size: 18px;
+}
+/* Seen Button (Green) */
+.seen-btn-customer {
+    background-color: #24bfd6;
+}
+
+.seen-btn-customer:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+/* Edit Button (Green) */
+.edit-btn-customer {
+    background-color: #28a745;
+}
+
+.edit-btn-customer:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+/* Delete Button (Red) */
+.delete-btn-customer {
+    background-color: #dc3545;
+}
+
+.delete-btn-customer:hover {
+    background-color: rgba(36, 221, 119, 0.1);
+    transform: scale(1.1);
+}
+
+/* Active Button (Lock - Black) */
+.active-btn-customer {
+    background-color: #343a40;
+}
+
+.active-btn-customer:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+/* Image Button */
+.image-btn-customer{
+    background-color: cadetblue;
+}
+.image-btn-customer:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+  /* Modal Styling */
+.customer-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.customer-modal-content {
+    border-color: #110e0e;
+    border-width: 2px;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 700px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow-y: scroll;
+    max-height: 640px;
+}
+.customer-modal-content::-webkit-scrollbar {
+    display: none;
+}
+.customer-modal-content h2{
+    font-size: 30px;
+    font-style:bold;
+}
+
+.customer-form-container{
+    display: flex;
+    flex-direction: row; 
+    width: 700px; 
+    justify-content: space-between;
+}
+
+.customer-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.close-btn-customer{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #5f666d;
+    border: none; 
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+}
+
+.customer-form-group input,
+.customer-form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+
+.avatar-preview{
+    margin-bottom: 20px;
+}
+.avatar-preview-image{
+    width: 200px;
+    border-radius: 50px;
+}

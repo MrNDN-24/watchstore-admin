@@ -1,0 +1,165 @@
+/* Container for the entire statistics section */
+.statistics-container {
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Hiding scrollbar for the container */
+.statistics-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Title styles */
+h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Summary section with better spacing */
+/* Summary section with better spacing */
+.statistics-summary {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các item tự động wrap xuống */
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: space-between; /* Căn đều các phần tử theo chiều ngang */
+}
+
+/* Individual statistic item styling with different colors */
+.stat-item {
+  background: linear-gradient(45deg, #4caf50, #81c784); /* Green gradient */
+  border-radius: 8px; /* Add border-radius */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center;
+  flex: 1 1 18%; /* Đảm bảo mỗi item chiếm 18% chiều rộng và có thể co giãn */
+  min-width: 200px; /* Đảm bảo các item không quá nhỏ khi màn hình nhỏ */
+}
+
+.stat-item:nth-child(1) {
+  background: linear-gradient(45deg, #4caf50, #81c784); /* Green gradient */
+}
+
+.stat-item:nth-child(2) {
+  background: linear-gradient(45deg, #f39c12, #f1c40f); /* Yellow gradient */
+}
+
+.stat-item:nth-child(3) {
+  background: linear-gradient(45deg, #3498db, #2980b9); /* Blue gradient */
+}
+
+.stat-item:nth-child(4) {
+  background: linear-gradient(45deg, #e74c3c, #c0392b); /* Red gradient */
+}
+
+.stat-item:nth-child(5) {
+  background: linear-gradient(45deg, #9b59b6, #8e44ad); /* Purple gradient */
+}
+
+/* Keep the same styling for hover effect */
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.stat-item h3 {
+  font-size: 16px;
+  color: #f9f9f9;
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+/* Export button section */
+.export-section {
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonPDF,
+.buttonExcel {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+.buttonPDF:hover,
+.buttonExcel:hover {
+  background-color: #64acdb;
+}
+
+.buttonPDF:focus,
+.buttonExcel:focus {
+  outline: none;
+}
+
+/* Chart container styling */
+.chart-container {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Chart title */
+.chart-container h3 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Make the chart responsive and compact */
+@media (max-width: 768px) {
+  .statistics-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-item {
+    flex: 1 1 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+
+  /* Adjust chart height for mobile */
+  .chart-container {
+    padding: 5px;
+  }
+
+  .chart-container h3 {
+    font-size: 24px;
+  }
+}

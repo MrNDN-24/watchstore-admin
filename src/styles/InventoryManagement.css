@@ -1,0 +1,271 @@
+/* inventory Management Container */
+.inventory-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* inventory Header */
+  .inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .inventory-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .inventory-search {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .add-inventory-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-inventory-btn:hover {
+    background-color: #218838;
+  }
+  
+ /* Table */
+.inventory-table {
+    overflow-x: scroll;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.inventory-table::-webkit-scrollbar {
+    display: none;
+}
+.inventory-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #110e0e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inventory-table th,
+.inventory-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust column widths */
+/* Adjust column widths */
+.inventory-table th:nth-child(1), /* chill1 column */
+.inventory-table td:nth-child(1) {
+    width: 8%; /* Decrease width of chill1 column */
+}
+
+.inventory-table th:nth-child(2), /* chill2 column */
+.inventory-table td:nth-child(2) {
+    width: 14%; /* Increase width of chill2 column by the amount reduced from chill1 */
+}
+
+
+.inventory-table th:nth-child(5), /* Số Lượng column */
+.inventory-table td:nth-child(5) {
+    width: 12%; /* Decrease width of Số Lượng column */
+}
+
+.inventory-table th:nth-child(3), /* Mô Tả column */
+.inventory-table td:nth-child(3) {
+    width: 22%; /* Decrease width of Mô Tả column slightly */
+}
+
+.inventory-table th:nth-child(4), /* Image column */
+.inventory-table td:nth-child(4) {
+    width: 18%; /* Increase width of Image column */
+}
+
+.inventory-table th:nth-child(6), /* Hành Động column */
+.inventory-table td:nth-child(6) {
+    width: 26%; /* Increase width of Hành Động column */
+}
+
+
+.inventory-table th {
+    background-color: #f4f4f4;
+    border-top: 2px solid #110e0e;
+}
+
+/* Button Layout for Actions */
+.inventory-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inventory-actions button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.icon-inventory {
+    font-size: 18px;
+}
+/* Seen Button (Green) */
+.seen-btn-inventory {
+    background-color: #24bfd6;
+}
+
+.seen-btn-inventory:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+/* Edit Button (Green) */
+.edit-btn-inventory {
+    background-color: #28a745;
+}
+
+.edit-btn-inventory:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+/* Delete Button (Red) */
+.delete-btn-inventory {
+    background-color: #dc3545;
+}
+
+.delete-btn-inventory:hover {
+    background-color: rgba(36, 221, 119, 0.1);
+    transform: scale(1.1);
+}
+
+/* Active Button (Lock - Black) */
+.active-btn-inventory {
+    background-color: #343a40;
+}
+
+.active-btn-inventory:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+/* Image Button */
+.image-btn-inventory{
+    background-color: cadetblue;
+}
+.image-btn-inventory:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+  /* Modal Styling */
+.inventory-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.inventory-modal-content {
+    border-color: #110e0e;
+    border-width: 2px;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 900px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow-y: scroll;
+    max-height: 600px;
+}
+.inventory-modal-content::-webkit-scrollbar {
+    display: none;
+}
+.inventory-modal-content h2{
+    font-size: 30px;
+    font-style:bold;
+}
+.inventory-form-container{
+    display: flex;
+    flex-direction: row; 
+    width: 900px; 
+    justify-content: space-between;
+}
+
+.inventory-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.close-btn-inventory{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #5f666d;
+    border: none; 
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+}
+
+.inventory-form-group input,
+.inventory-form-group textarea,
+.inventory-form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.inventory-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+
+.inventory-submit-btn {
+padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.inventory-submit-btn:hover{
+    background-color: #218838;
+}
+
+.image-inventory-primary{
+    width: 150px;
+}

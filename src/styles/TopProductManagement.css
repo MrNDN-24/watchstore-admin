@@ -1,0 +1,90 @@
+.top-product-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80vh;
+    overflow-y: auto;
+    position: relative; 
+}
+.top-product-container::-webkit-scrollbar{
+    display: none;
+}
+.buttonPDF-product {
+    padding: 10px 20px;  
+    font-size: 1.2rem;   
+    background-color: #4875a8; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    transition: background-color 0.3s ease; 
+    width: auto;
+}
+
+.buttonPDF-product:hover {
+    background-color: #1a96df; 
+}
+
+.top-product-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.top-product-chart-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.top-product-table-container {
+    margin-top: 70px;
+}
+
+.top-product-table-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.top-product-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #110e0e;
+    border-radius: 10px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+.top-product-table th,
+.top-product-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    height: auto;
+}
+
+.top-product-table th {
+    background-color: #f4f4f4;
+    border-top: 2px solid #110e0e;
+}
+
+.top-product-table td {
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .top-product-chart-container {
+        width: 100%;
+    }
+    .top-product-table {
+        font-size: 14px;
+    }
+}

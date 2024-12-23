@@ -1,0 +1,110 @@
+/* Sidebar Container */
+.sidebar-container {
+    position: fixed;
+    top: 60px; /* Đặt Sidebar dưới Navbar */
+    left: 0;
+    height: calc(100vh - 60px); /* Chiều cao của Sidebar dưới Navbar */
+    width: 280px; /* Sidebar width */
+    background-color: #fff; /* Đổi màu nền Sidebar thành màu trắng */
+    z-index: 500; /* Sidebar dưới Navbar */
+    box-shadow: 6px 0 25px rgba(77, 107, 134, 0.4); /* Tăng độ shadow */
+}
+
+/* Sidebar content */
+.sidebar {
+    padding: 20px;
+    color: #333; /* Đổi màu chữ trong Sidebar thành màu tối */
+    overflow-y: auto;
+    height: 100%; /* Giữ Sidebar có chiều cao đầy đủ */
+}
+
+/* Sidebar Navigation */
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333; /* Đổi màu chữ của các menu item thành màu tối */
+    padding: 10px 15px;
+    display: flex;
+    align-items: center; /* Căn giữa icon và text */
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #2980b9;
+    color: white;
+    transform: scale(1.05);
+}
+
+.sidebar nav ul li a.active {
+    background-color: #2980b9;
+    color: white;
+    font-weight: 700;
+}
+
+/* Style cho menu toggle */
+.menu-toggle {
+    cursor: pointer;
+    text-decoration: none;
+    color: #333; /* Đổi màu chữ của menu toggle */
+    padding: 10px 15px;
+    display: flex;
+    align-items: center; /* Căn giữa icon và text */
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    justify-content: space-between; /* Tạo không gian giữa icon và text */
+}
+
+/* Hiển thị mũi tên */
+.menu-arrow {
+    font-size: 18px; /* Kích thước mũi tên */
+    margin-left: 15px; /* Khoảng cách giữa text và mũi tên */
+}
+
+/* Style cho menu toggle khi hover */
+.menu-toggle:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* Style cho icon trong Sidebar */
+.sidebar nav ul li a svg {
+    margin-right: 10px; /* Khoảng cách giữa icon và text */
+    font-size: 18px; /* Kích thước icon */
+}
+
+/* Style cho menu con */
+.submenu {
+    list-style-type: none;
+    padding-left: 40px; /* Thụt vào thêm một chút */
+    margin-top: 5px; /* Thêm khoảng cách trên để menu con không bị dính với mục chính */
+    margin-left: 15px;
+}
+
+.submenu li {
+    margin-bottom: 10px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #333; /* Đổi màu chữ trong menu con thành màu tối */
+    padding: 8px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.submenu li a:hover {
+    background-color: #2980b9;
+    color: white;
+    transform: scale(1.05);
+}
+
